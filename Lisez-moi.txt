@@ -1,0 +1,20 @@
+1. Créez une nouvelle base de données dans Workbench
+
+2.Dans le fichier database.py 
+SQLALCHEMY_DATABASE_URL = "mysqlpymysql://username:password@hostname:port/database_name"
+username: Le nom d'utilisateur de votre base de données MySQL.
+password: Le mot de passe associé à l'utilisateur de la base de données.
+hostname: L'adresse IP ou le nom d'hôte du serveur MySQL.
+port: Le port sur lequel MySQL écoute. Par défaut, MySQL utilise le port 3306.
+database_name: Le nom de la base de données à laquelle se connecter.
+
+3.Lancer ces commandes
+cd my_super_project
+python - m venv venv 
+venv\Script\activate.ps ----> Si vous utilisez Powershell
+venv\Script\activate.bat ----> si vous utilisez le CMD
+pip install pymysql
+pip install fastapi[all]
+pip install sqlalchemy
+
+Lancer l'application : uvicorn sql_app.main:app --reload
